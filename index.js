@@ -11,5 +11,17 @@ for (let i = 1; i < 5; i++) {
     divs[i].classList.add(`row-${[i]}`);
     divs[i].textContent = `Contents of ${[i]} row`;
     container.appendChild(divs[i]);
+
+    container.addEventListener("mouseover", (e) => {
+        
+        e.target.style.backgroundColor = "chocolate";
+
+    }, false);
+
+    container.addEventListener("mouseout", (e) => {
+
+        e.target.style.backgroundColor = "";
+
+    }, false);
 }
 
