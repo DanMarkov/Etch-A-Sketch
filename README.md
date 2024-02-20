@@ -1,4 +1,4 @@
 ### Etch-a-Sketch Project
 
-In this project I develop a Etch-a-Sketch game.
+In this project I develop an Etch-a-Sketch game.
 
