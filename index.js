@@ -7,6 +7,15 @@ let button = document.createElement("button");
 button.textContent = "CLICK ME!";
 document.body.insertBefore(button, container);
 
+function randomColor() {
+    let r = Math.floor(Math.random() * 255) + 1;
+    let g = Math.floor(Math.random() * 255) + 1;
+    let b = Math.floor(Math.random() * 255) + 1;
+    return rgb = "rgb(" + r + " " + g + " " + b + ")";
+}
+
+
+
 button.addEventListener("click", () => {
     textContent = +prompt("Create a new canvas", 64);
 
@@ -21,6 +30,7 @@ button.addEventListener("click", () => {
     } else if (textContent > 100) {
         alert("Your number is too high");
     } else {
+        grid.style.backgroundColor = randomColor();
         grid.textContent = `${textContent}`;
         grid.style.width = `${textContent}px`;
         grid.style.height = `${textContent}px`;
@@ -33,17 +43,20 @@ button.addEventListener("click", () => {
         container.removeChild(container.firstElementChild);
     }
 
+
     grid.addEventListener("mouseenter", (e) => {
         
-        e.target.style.backgroundColor = "chocolate";
+        e.target.style.backgroundColor = randomColor();
 
     }, false);
 
     grid.addEventListener("mouseleave", (e) => {
 
-        e.target.style.backgroundColor = "";
+        e.target.style.backgroundColor = randomColor();
 
     }, false);
+
+    console.log(randomColor())
 });
 
 

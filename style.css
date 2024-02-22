@@ -18,7 +18,7 @@ button {
 .row {
     text-align: center;
     color: white;
-    background-color: red;
+    /* background-color: red; */
     width: 960px;
 }
 
